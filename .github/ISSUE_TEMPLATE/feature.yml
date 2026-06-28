@@ -1,0 +1,92 @@
+name: 优化 / 新功能
+description: 记录一个优化想法或新增需求，方便后续规划和实现
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem_or_goal
+    attributes:
+      label: 想解决什么问题
+      description: 写为什么想做这个
+      placeholder: 例如：当前设置入口太深，用户经常找不到
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_result
+    attributes:
+      label: 希望变成什么样
+      description: 写你理想中的结果
+      placeholder: 例如：首页直接提供设置入口，减少查找步骤
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: 类型
+      options:
+        - 优化现有体验
+        - 新增小功能
+        - 新增完整功能
+        - 技术债 / 重构
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 不急，先记下来
+        - 下个版本可以一起做
+        - 希望尽快安排
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_scenario
+    attributes:
+      label: 使用场景
+      description: 谁在什么情况下会用到；不知道可以留空
+      placeholder: 例如：新用户第一次进入时，需要快速找到设置入口
+    validations:
+      required: false
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 最晚希望完成时间
+      placeholder: 例如：2026-08-15
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 限制或注意事项
+      description: 例如不要改某个页面、不要影响旧流程、先别上线
+      placeholder: 例如：只改首页入口，不动设置页整体结构
+    validations:
+      required: false
+
+  - type: dropdown
+    id: ai_next_action
+    attributes:
+      label: 希望 AI 下一步怎么做
+      options:
+        - 先给方案和范围
+        - 直接开始实现并提交 PR
+        - 先记下来，后续再做
+        - 并入下一次版本改动统一处理
+    validations:
+      required: true
+
+  - type: textarea
+    id: done_definition
+    attributes:
+      label: 怎样算完成
+      description: 不确定可以留空
+      placeholder: 例如：首页可直接进入设置页，手机和桌面端都能正常使用
+    validations:
+      required: false
