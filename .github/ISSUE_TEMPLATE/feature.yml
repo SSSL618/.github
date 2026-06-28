@@ -53,6 +53,19 @@ body:
     validations:
       required: false
 
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考图片 / 参考示例
+      description: 可以贴截图、设计稿、网页链接、竞品示例或你想模仿的效果
+      placeholder: |
+        例如：
+        - 参考截图已附在 issue 下方
+        - 参考页面：https://example.com
+        - 想接近某个产品里的某个交互
+    validations:
+      required: false
+
   - type: input
     id: deadline
     attributes:
